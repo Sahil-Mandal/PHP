@@ -8,9 +8,9 @@
         $this->cc=$cc;
         $this->vat=$vat;
     }
-    public static function bikedetail($cc)
+    public static function bikedetail($cc, $vat)
     {
-        echo $cc;
+        return new static($cc,$vat);
     }
     public function displayDetail()
     {
@@ -18,8 +18,7 @@
         echo $this->vat;
     }
  }
- Bike::bikedetail(220);
-
-
+ $bike =  Bike::bikedetail(23,34);
+ $bike->displayDetail();
 
 ?>
